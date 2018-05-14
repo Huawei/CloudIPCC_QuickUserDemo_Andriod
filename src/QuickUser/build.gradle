@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+//        jcenter()
+        maven {
+            url "http://w3cloudnkg-sit1.huawei.com/ccloud/nexus/content/groups/public/"
+        }
+
+        //for codex
+        mavenLocal() // 增加此行，用于在Agent中编译时寻找本地依赖的库
+        flatDir { dirs rootProject.projectDir.toString() + '/plugin' }  // 增加此行，配置plugin目录依赖
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // 增加此行，配置codedex所需的依赖库
+        classpath group: 'com.github.sdong.gradle', name: 'coverityfortifyPlugin', version: '1.2.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+//        jcenter()
+        maven {
+            url "http://w3cloudnkg-sit1.huawei.com/ccloud/nexus/content/groups/public/"
+        }
+        mavenLocal()  // 增加此行，用于在Agent中编译时寻找本地依赖的库
+    }
+
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.sourcepath = files('/this/directory/must/not/exist')
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

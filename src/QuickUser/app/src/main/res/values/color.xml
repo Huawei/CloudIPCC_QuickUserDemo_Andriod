@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~    Copyright 2015 Huawei Technologies Co., Ltd. All rights reserved.
+  ~    eSDK is licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
+  -->
+
+<resources>
+
+    <drawable name="translucent">#00000000</drawable>
+    <drawable name="tp_bg_contact_item_normal">#f2f4f5</drawable>
+    <drawable name="tp_phone_sys_setting_item_bg_white">#ffffff</drawable>
+    <drawable name="te_mobiole_img_selected">#77227cd1</drawable>
+    <drawable name="te_mobiole_img_unselected">#00EAB80B</drawable>
+    <!-- setting item clicked -->
+    <drawable name="te_item_focus">#e5e5e5</drawable>
+    <drawable name="conf_list_item_focus">#66ffffff</drawable>
+
+    <color name="video_info_red">#ff0000</color>
+    <color name="video_info_orange">#f38f00</color>
+    <color name="white">#ffffff</color>
+    <!-- half translucent -->
+    <color name="half_white">#77ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="prompt_gray">#666666</color>
+    <color name="conversation_name_color">#333333</color>
+    <color name="text_dan">#999999</color>
+    <color name="text_savecontact_title">#969696</color>
+    <color name="te_title_text_focus">#1e5164</color>
+    <color name="te_title_text_normal">#3ca1c8</color>
+    <color name="gray">#ff4a4a4a</color>
+
+    <!-- new define -->
+    <color name="text_blue">#00ccff</color>
+    <!-- home bottom color-->
+    <color name="te_home_bottom_text_focus">#227cd1</color>
+    <!--pad editContact click color  -->
+    <color name="te_home_bottom_text_half_focus">#77227cd1</color>
+    <color name="te_home_bottom_text_normal">#929292</color>
+    <color name="text_blue3">#56b3d7</color>
+    <color name="text_gray">#666666</color>
+    <color name="shad_view_color">#88000000</color>
+    <color name="dial_num">#000000</color>
+    <color name="dial_bg_gray">#cccccc</color>
+
+    <!-- sketch paint color -->
+    <color name="sketch_paint_color_yellow">#EAB80B</color>
+
+    <color name="text_set_gray">#bfbfbf</color>
+    <color name="material_grey_600">#ff757575</color>
+</resources>

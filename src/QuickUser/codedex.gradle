@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 用于Codedex编译使用 author : b00219425  Date:2016/12/16
+apply plugin: 'com.github.sdong.gradle.coverityfortify'
+
+coverity_fortify {
+    def projectName =  rootProject.name.toString()
+    println("project = " + projectName)
+    coverity{
+        //coverity输出目录，必须设置此属性
+        intermediateDir = "d:/codeDEX_output/"+ projectName+"/cov_tmp/"
+        //如不需要zip，设置zipfile=””或不添加此属性，默认不打包。
+        zipfile = "d:/codeDEX_output/"+projectName+"/coverity.zip"
+       //source java version, Coverity 支持的版本： 1.4, 1.5, 1.6, 1.7, 1.8。必须设置此属性
+        sourceVersion = "1.8"
+        //如使用Gradle aDebug, debugMode 参数应该设置成”true”。或不添加此属性，默认值为false。
+        debugMode = " false"
+    }
+
+    fortify{
+        // Fortify输出目录，必须设置此属性
+        intermediateDir = "d:/codeDEX_output/"+projectName+"/for_tmp/"
+        //fortify build id，必须设置此属性
+        fortifyBuildId = "fortify_build_id"
+        //source java version, Fortify 支持的版本： 1.4, 1.5, 1.6, 1.7, 1.8。必须设置此属性
+        sourceVersion = "1.8"
+        //如不需要zip，设置zipfile=””或不添加此属性，默认不打包。
+        zipfile = "d:/codeDEX_output/"+projectName+"/fortify.zip"
+    }
+}
+
