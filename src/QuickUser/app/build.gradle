@@ -58,4 +58,3 @@ dependencies {
     compile 'com.android.support:design:26.+'
 }
 
-apply from: '../codedex.gradle'
